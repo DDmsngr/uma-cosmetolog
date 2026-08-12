@@ -15,7 +15,8 @@ export default function Hero() {
           alt="Косметологический уход"
           className="absolute inset-0 w-full h-full object-cover object-[65%] lg:object-center z-0"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#EDE4D3]/30 via-transparent to-[#EDE4D3]/10 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/40 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#EDE4D3]/40 via-transparent to-transparent z-[1]" />
 
         <div className="relative z-10 w-full h-full flex flex-col items-center">
           <Navbar />
@@ -26,7 +27,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-normal text-[rgba(60,42,25,0.95)] mb-2 tracking-tight leading-[1.05]"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-normal text-white mb-4 tracking-tight leading-[1.05] [text-shadow:_0_2px_20px_rgba(0,0,0,0.25)]"
             >
               Гладкая кожа. Уверенный взгляд.
             </motion.h1>
@@ -34,7 +35,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-sm sm:text-base md:text-lg text-[rgba(60,42,25,0.8)] opacity-90 leading-relaxed max-w-xl font-normal"
+              className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed max-w-xl font-normal [text-shadow:_0_1px_10px_rgba(0,0,0,0.3)]"
             >
               Индивидуальные протоколы ухода, безопасные препараты, видимый результат.
               Москва и онлайн-консультации.
