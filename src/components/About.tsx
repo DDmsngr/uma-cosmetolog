@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { GraduationCap, Award, Clock } from 'lucide-react'
+import SectionHeading from './SectionHeading'
 
 const ABOUT_IMAGE =
   'https://images.pexels.com/photos/6810869/pexels-photo-6810869.jpeg?auto=compress&cs=tinysrgb&w=1200'
@@ -38,12 +39,7 @@ export default function About() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
-          <span className="text-xs md:text-sm uppercase tracking-[0.2em] text-[rgba(60,42,25,0.5)]">
-            Обо мне
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-[rgba(60,42,25,0.95)] mt-3 mb-6 leading-[1.1] tracking-tight">
-            Ума — ваш личный косметолог
-          </h2>
+          <SectionHeading eyebrow="Обо мне" className="mb-6">Ума — ваш личный косметолог</SectionHeading>
           <p className="text-base md:text-lg text-[rgba(60,42,25,0.75)] leading-relaxed mb-5">
             Работаю с кожей всех типов и возрастов. Строю уход как систему: диагностика, план процедур,
             домашняя рутина. Никакого впаривания «модного» — только то, что работает именно для вас.

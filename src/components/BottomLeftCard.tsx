@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { ArrowUpRight } from 'lucide-react'
+import AnimatedNumber from './AnimatedNumber'
 
 export default function BottomLeftCard() {
   return (
@@ -7,10 +8,14 @@ export default function BottomLeftCard() {
       initial={{ x: -20, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="absolute bottom-28 right-4 left-auto md:left-6 md:right-auto md:bottom-6 lg:bottom-10 lg:left-10 p-3 md:p-4 lg:p-5 rounded-[1.2rem] md:rounded-[1.5rem] lg:rounded-[2.2rem] bg-white/30 backdrop-blur-xl flex flex-col gap-2 lg:gap-3 min-w-[140px] md:min-w-[150px] lg:min-w-[180px] w-fit"
+      className="float-soft absolute bottom-28 right-4 left-auto md:left-6 md:right-auto md:bottom-6 lg:bottom-10 lg:left-10 p-3 md:p-4 lg:p-5 rounded-[1.2rem] md:rounded-[1.5rem] lg:rounded-[2.2rem] bg-white/40 backdrop-blur-xl flex flex-col gap-2 lg:gap-3 min-w-[140px] md:min-w-[150px] lg:min-w-[180px] w-fit shadow-xl shadow-black/10"
     >
       <div className="flex flex-col">
-        <span className="text-2xl md:text-3xl font-normal text-[rgba(60,42,25,0.9)] tracking-tight">500+</span>
+        <AnimatedNumber
+          to={500}
+          suffix="+"
+          className="text-2xl md:text-3xl font-normal text-[rgba(60,42,25,0.9)] tracking-tight"
+        />
         <span className="text-[10px] md:text-[12px] font-normal text-[rgba(60,42,25,0.6)] uppercase tracking-wider">
           Довольных клиентов
         </span>

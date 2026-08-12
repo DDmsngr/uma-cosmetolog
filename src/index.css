@@ -38,3 +38,58 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #C99A4E 0%,
+    #E8B863 25%,
+    #FFE3A3 50%,
+    #E8B863 75%,
+    #C99A4E 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+  filter:
+    drop-shadow(0 0 24px rgba(232, 184, 99, 0.35))
+    drop-shadow(0 2px 18px rgba(0, 0, 0, 0.55));
+}
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-soft {
+  animation: float-soft 5s ease-in-out infinite;
+}
+
+.float-soft-delayed {
+  animation: float-soft 5s ease-in-out infinite;
+  animation-delay: -2.5s;
+}
+
+@keyframes ken-burns {
+  0%   { transform: scale(1.05) translate(0, 0); }
+  50%  { transform: scale(1.12) translate(-1.5%, -1%); }
+  100% { transform: scale(1.05) translate(0, 0); }
+}
+
+.ken-burns {
+  animation: ken-burns 22s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gold-shimmer, .float-soft, .float-soft-delayed, .ken-burns {
+    animation: none;
+  }
+}

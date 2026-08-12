@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { ArrowUpRight, Droplet, Sparkles, Syringe, Flame, Wind, Leaf } from 'lucide-react'
+import SectionHeading from './SectionHeading'
 
 const SERVICES = [
   {
@@ -45,13 +46,8 @@ export default function Services() {
     <section id="services" className="py-24 md:py-32 px-6 md:px-10 bg-[#F0EAD8]">
       <div className="max-w-[1536px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
-          <div>
-            <span className="text-xs md:text-sm uppercase tracking-[0.2em] text-[rgba(60,42,25,0.5)]">
-              Услуги
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-[rgba(60,42,25,0.95)] mt-3 leading-[1.1] tracking-tight max-w-2xl">
-              Процедуры, за которыми возвращаются
-            </h2>
+          <div className="max-w-2xl">
+            <SectionHeading eyebrow="Услуги">Процедуры, за которыми возвращаются</SectionHeading>
           </div>
           <a
             href="#contact"
@@ -66,13 +62,15 @@ export default function Services() {
           {SERVICES.map((s, i) => (
             <motion.div
               key={s.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-              whileHover={{ y: -4 }}
-              className="group relative bg-white/60 backdrop-blur-sm rounded-[1.5rem] p-6 md:p-7 border border-white/50 hover:bg-white/80 transition-all cursor-pointer"
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.55, delay: (i % 3) * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -6, rotateX: 2, rotateY: -2 }}
+              style={{ transformPerspective: 800 }}
+              className="group relative bg-white/60 backdrop-blur-sm rounded-[1.5rem] p-6 md:p-7 border border-white/50 hover:bg-white/85 hover:shadow-xl hover:shadow-[rgba(60,42,25,0.08)] transition-all cursor-pointer"
             >
+              <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-br from-[#E8B863]/0 via-transparent to-[#E8B863]/0 group-hover:from-[#E8B863]/10 group-hover:to-[#E8B863]/5 transition-opacity pointer-events-none" />
               <div className="flex items-start justify-between mb-5">
                 <div className="w-12 h-12 rounded-full bg-[rgba(60,42,25,0.08)] flex items-center justify-center">
                   <s.icon className="w-5 h-5 text-[rgba(60,42,25,0.8)]" />

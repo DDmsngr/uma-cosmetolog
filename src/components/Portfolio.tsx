@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import SectionHeading from './SectionHeading'
 
 const IMAGES = [
   {
@@ -32,12 +33,7 @@ export default function Portfolio() {
     <section id="portfolio" className="py-24 md:py-32 px-6 md:px-10 bg-[#EDE4D3]">
       <div className="max-w-[1536px] mx-auto">
         <div className="mb-12 md:mb-16 max-w-2xl">
-          <span className="text-xs md:text-sm uppercase tracking-[0.2em] text-[rgba(60,42,25,0.5)]">
-            Портфолио
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-[rgba(60,42,25,0.95)] mt-3 leading-[1.1] tracking-tight">
-            Результаты, которые говорят сами за себя
-          </h2>
+          <SectionHeading eyebrow="Портфолио">Результаты, которые говорят сами за себя</SectionHeading>
           <p className="text-base md:text-lg text-[rgba(60,42,25,0.65)] mt-5 leading-relaxed">
             Реальные фото до и после процедур. Все снимки публикуются с согласия клиентов.
           </p>
@@ -57,9 +53,14 @@ export default function Portfolio() {
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(60,42,25,0.5)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(60,42,25,0.75)] via-[rgba(60,42,25,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <span className="text-white text-sm md:text-base font-normal [text-shadow:_0_1px_8px_rgba(0,0,0,0.4)]">
+                  {img.alt}
+                </span>
+              </div>
             </motion.div>
           ))}
         </div>

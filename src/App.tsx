@@ -1,5 +1,8 @@
 import { lazy, Suspense } from 'react'
 import Hero from './components/Hero'
+import ScrollProgress from './components/ScrollProgress'
+import MobileCTA from './components/MobileCTA'
+import Marquee from './components/Marquee'
 
 const About = lazy(() => import('./components/About'))
 const Services = lazy(() => import('./components/Services'))
@@ -10,8 +13,10 @@ const Footer = lazy(() => import('./components/Footer'))
 
 export default function App() {
   return (
-    <main className="min-h-screen bg-[#EDE4D3]">
+    <main className="min-h-screen bg-[#EDE4D3] overflow-x-hidden">
+      <ScrollProgress />
       <Hero />
+      <Marquee />
       <Suspense fallback={<div className="h-40" />}>
         <About />
         <Services />
@@ -20,6 +25,7 @@ export default function App() {
         <Contact />
         <Footer />
       </Suspense>
+      <MobileCTA />
     </main>
   )
 }

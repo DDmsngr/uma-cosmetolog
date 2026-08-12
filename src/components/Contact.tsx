@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Phone, Send, MessageCircle, MapPin, ArrowUpRight } from 'lucide-react'
+import SectionHeading from './SectionHeading'
 
 const CHANNELS = [
   { icon: Phone, label: 'Телефон', value: '+7 (900) 000-00-00', href: 'tel:+79000000000' },
@@ -34,12 +35,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-xs md:text-sm uppercase tracking-[0.2em] text-[rgba(60,42,25,0.5)]">
-            Контакты
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-[rgba(60,42,25,0.95)] mt-3 mb-6 leading-[1.1] tracking-tight">
-            Запишитесь на первую консультацию
-          </h2>
+          <SectionHeading eyebrow="Контакты" className="mb-6">Запишитесь на первую консультацию</SectionHeading>
           <p className="text-base md:text-lg text-[rgba(60,42,25,0.7)] leading-relaxed mb-10">
             Оставьте заявку — напишу в течение часа. Или напишите мне напрямую в мессенджер, так быстрее.
           </p>

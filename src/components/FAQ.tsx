@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Plus } from 'lucide-react'
+import SectionHeading from './SectionHeading'
 
 const ITEMS = [
   {
@@ -31,13 +32,8 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-24 md:py-32 px-6 md:px-10 bg-[#F0EAD8]">
       <div className="max-w-[1100px] mx-auto">
-        <div className="mb-12 md:mb-16 text-center">
-          <span className="text-xs md:text-sm uppercase tracking-[0.2em] text-[rgba(60,42,25,0.5)]">
-            FAQ
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-[rgba(60,42,25,0.95)] mt-3 leading-[1.1] tracking-tight">
-            Частые вопросы
-          </h2>
+        <div className="mb-12 md:mb-16">
+          <SectionHeading eyebrow="FAQ" align="center">Частые вопросы</SectionHeading>
         </div>
 
         <div className="space-y-3">
