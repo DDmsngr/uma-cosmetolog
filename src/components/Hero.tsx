@@ -14,9 +14,11 @@ export default function Hero() {
           src={HERO_IMAGE}
           alt="Косметологический уход"
           className="absolute inset-0 w-full h-full object-cover object-[65%] lg:object-center z-0"
+          style={{ filter: 'contrast(1.15) saturate(1.4) sepia(0.35) brightness(0.62) hue-rotate(-6deg)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/40 z-[1]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#EDE4D3]/40 via-transparent to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_25%,rgba(20,10,5,0.55)_100%)] z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/40 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#EDE4D3]/25 via-transparent to-transparent z-[1]" />
 
         <div className="relative z-10 w-full h-full flex flex-col items-center">
           <Navbar />
@@ -27,7 +29,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-normal text-white mb-4 tracking-tight leading-[1.05] [text-shadow:_0_2px_20px_rgba(0,0,0,0.25)]"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-normal mb-4 tracking-tight leading-[1.05] text-[#E8B863] [text-shadow:_0_0_40px_rgba(232,184,99,0.35),_0_0_18px_rgba(232,184,99,0.25),_0_2px_20px_rgba(0,0,0,0.55)]"
             >
               Гладкая кожа. Уверенный взгляд.
             </motion.h1>
@@ -35,7 +37,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed max-w-xl font-normal [text-shadow:_0_1px_10px_rgba(0,0,0,0.3)]"
+              className="text-sm sm:text-base md:text-lg leading-relaxed max-w-xl font-normal text-[#F5EBD5] [text-shadow:_0_0_20px_rgba(245,235,213,0.25),_0_1px_12px_rgba(0,0,0,0.55)]"
             >
               Индивидуальные протоколы ухода, безопасные препараты, видимый результат.
               Москва и онлайн-консультации.

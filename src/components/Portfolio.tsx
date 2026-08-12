@@ -51,7 +51,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-              className="relative overflow-hidden rounded-[1.5rem] group cursor-pointer aspect-[4/5]"
+              className="relative overflow-hidden rounded-[1.5rem] group cursor-pointer aspect-square"
             >
               <img
                 src={img.src}
